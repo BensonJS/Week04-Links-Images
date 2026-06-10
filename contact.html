@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/styles.css" rel="stylesheet">
+    <title>Week 04 - Contact forms</title>
+</head>
+<body>
+    <header>
+        <h1>Contact Me!</h1>
+    </header>
+    <nav>
+        <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="about.html">About</a></li>
+              <li> <a href="contact.html">Contact</a></li>
+              <!-- external pages need the full address...
+               use _blank to open in a new tab -->
+            <li> <a href="https://imdac.github.io" target="_blank">More web stuff</a></li>
+        </ul>
+    </nav>
+    <main> 
+        <!-- HTML forms let users enter information into your site-->
+         <!-- form require two attributes to tell them how to submit
+           method tells the form how to send the information -->
+        <form  action="contact.html" method="get">
+            <section>
+             <!-- to link the label with the input,
+              use 'for' on label matching the 'id' on the input-->
+             <label for="name">Name:</label>
+             <input id="name" type="text" name="name" placeholder="Your Name">
+
+             <label for="email">Email:</label>
+             <input id="email" type="email" name="email" placeholder="email@example.com">
+             </section>
+   
+             <section>
+             <label for="pass">Password:</label>
+             <input type="password" id="pass" name="pass" placeholder="password">
+                <!-- for the number field, you can set a minimum and maximum
+                 (So the user can't enter things hiher or lower)-->
+             <label for="When">When?</label>"
+             <input type="date" id="when" name="when">
+
+             <label for="How">How Many?</label>
+             <input type="number" id="how" min="10" max="100" name="how">
+            </section>
+
+            <section>
+                <!-- to make a dropdown menu, use the select tag -->
+                 <label for="colours">Colours:</label>
+                 <select id="colours" name="colours">
+                    <option value="Purple">Purple</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green" selected>Green</option>
+                 </section>
+
+                 <!-- radio buttons operate as a set - check one, and the others uncheck-->
+                  <section>
+                  <label for="One">1</label>
+                  <input type="radio" name="HowMany" id="One" value="1">
+
+                  <label for="Two">2</label>
+                  <input type="radio" name="HowMany" id="Two" value="2">
+
+                  <label for="Three">3</label>
+                  <input type="radio" name="HowMany" id="Three" value="3">
+
+                  </section>
+            </section>
+
+            <section>
+                <!-- to submit a from, add a sumbit button -->
+                <input type="submit" value="Submit The Form" name="submit">
+            </section>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+</html>
